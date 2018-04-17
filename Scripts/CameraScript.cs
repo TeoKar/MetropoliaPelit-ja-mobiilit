@@ -8,7 +8,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour {
 
     // Constants to limit camera movement
-    private const float y_Axis_Min = 0.0f;
+    private const float y_Axis_Min = 0.5f;
     private const float y_Axis_Max = 50.0f;
 
     public Transform lookingAt;
@@ -19,8 +19,9 @@ public class CameraScript : MonoBehaviour {
     private float distance = 10.0f;
     private float currentXaxis = 0.0f;
     private float currentYaxis = 0.0f;
-    private float sensitivityXaxis = 4.0f;
-    private float sensitivityYaxis = 1.0f;
+
+    [SerializeField] private float sensitivityXaxis = 4.0f;
+    [SerializeField] private float sensitivityYaxis = 1.0f;
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class CameraScript : MonoBehaviour {
         // 
         cameraTransform = transform;
         MainCamera = Camera.main;
+        Cursor.visible = false;
     }
 
     private void Update()
