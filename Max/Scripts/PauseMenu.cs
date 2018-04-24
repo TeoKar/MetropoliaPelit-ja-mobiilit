@@ -90,7 +90,7 @@ public class PauseMenu : MonoBehaviour
     /// <summary>
     /// Used to acces the state of pauseOn boolean so that other classes know if the game is currently paused.
     /// </summary>
-    /// <returns>pauseOn boolean</returns>
+    /// <returns>pauseOn boolean</returns>  
     public bool GetpauseOn()
     {
         return pauseOn;
